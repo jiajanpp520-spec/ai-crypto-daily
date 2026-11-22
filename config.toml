@@ -1,0 +1,101 @@
+# AI × 币圈 每日素材包：数据采集配置
+# 改完保存即可，下次运行生效。
+
+# 抓过去多少小时的新闻和推文
+lookback_hours = 24
+
+# 数据输出目录
+output_dir = "~/Documents/X早报"
+
+# 关注币种：CoinGecko 的 id + OKX 永续合约
+[[coins]]
+symbol = "BTC"
+coingecko_id = "bitcoin"
+okx_swap = "BTC-USDT-SWAP"
+
+[[coins]]
+symbol = "ETH"
+coingecko_id = "ethereum"
+okx_swap = "ETH-USDT-SWAP"
+
+[[coins]]
+symbol = "ZEC"
+coingecko_id = "zcash"
+okx_swap = "ZEC-USDT-SWAP"
+
+# 新闻源（RSS）
+[[feeds]]
+name = "CoinDesk"
+url = "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"
+topic = "crypto"
+
+[[feeds]]
+name = "Cointelegraph"
+url = "https://cointelegraph.com/rss"
+topic = "crypto"
+
+[[feeds]]
+name = "The Block"
+url = "https://www.theblock.co/rss.xml"
+topic = "crypto"
+
+[[feeds]]
+name = "Decrypt"
+url = "https://decrypt.co/feed"
+topic = "crypto"
+
+[[feeds]]
+name = "Odaily 快讯"
+url = "https://rss.odaily.news/rss/newsflash"
+topic = "crypto"
+
+[[feeds]]
+name = "The Verge AI"
+url = "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+topic = "ai"
+
+[[feeds]]
+name = "量子位"
+url = "https://www.qbitai.com/feed"
+topic = "ai"
+
+[[feeds]]
+name = "OpenAI News"
+url = "https://openai.com/news/rss.xml"
+topic = "ai"
+
+[[feeds]]
+name = "Google AI"
+url = "https://blog.google/technology/ai/rss/"
+topic = "ai"
+
+[[feeds]]
+name = "Simon Willison"
+url = "https://simonwillison.net/atom/everything/"
+topic = "ai"
+
+# 盯的 X 博主（不带 @）。可随时增删。
+[kols]
+crypto = ["Michael_Liu93", "Yuanshan0626", "lanhubiji", "tmel0211", "qinbafrank", "evilcos", "ai_9684xtpa", "hexiecs", "cymm66", "Bitwux"]
+ai = ["dotey", "op7418", "xiaohu", "Khazix0918", "oran_ge"]
+ai_x_crypto = ["_zheergen", "xingpt", "wquguru", "hisevenih", "0xduyan"]
+
+# GitHub 录屏选题：搜最近新建、星数在涨的 AI × 交易/链上项目
+[github]
+created_within_days = 30
+min_stars = 10
+queries = [
+  "trading agent llm",
+  "crypto ai agent",
+  "tradingview mcp",
+  "quant llm",
+  "onchain agent",
+  "polymarket ai",
+  "defi agent",
+  "crypto mcp server",
+  "ai trading bot",
+  "hyperliquid agent",
+  "solana ai agent",
+  "pine script ai",
+  "backtest llm",
+]
